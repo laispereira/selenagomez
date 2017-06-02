@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player com Javascript</title>
+	<link rel="stylesheet" type="text/css" href="plugin/css/style.css"> <!-- carregando css do plugin -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- carregando meu estilo de pagina -->
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script> <!-- carregando primeiro jquery -->
+    <script type="text/javascript" src="plugin/jquery-jplayer/jquery.jplayer.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="plugin/ttw-music-player-min.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="js/myplaylist.js"></script> <!-- carregando js criado para playlist -->
+
+   <!-- inicializando o plugin -->
+    <script type="text/javascript">
+    	// funcao criada para descricao- texto a ser apresentado na pagina
+        $(document).ready(function(){ 
+            var description = 'Selena Marie Gomez é uma cantora, atriz, compositora, dubladora, dançarina, estilista e filantropa norte-americana, de origem mexicana. Como atriz, estreou na série infantil Barney e seus Amigos, no início dos anos 2000.';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, //autoplay sem inicializar com play
+                description:description,
+                jPlayer:{
+                    swfPath:'plugin/jquery-jplayer' //diretorio do plugin para carregar
+                }
+            });
+        });
+  
+
+    </script>
+</head>
+<body>
+<div class="logo"></div> <!-- criando div para carregar logo via css -->
+</body>
+</html>
